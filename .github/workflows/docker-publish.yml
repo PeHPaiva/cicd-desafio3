@@ -23,8 +23,13 @@ env:
 
 
 jobs:
-  build:
 
+  integration:
+    uses: PeHPaiva/cicd-desafio3/.github/workflows/python-app.yml@main
+    permissions: read
+    
+  build:
+    needs: integration
     runs-on: ubuntu-latest
     permissions:
       contents: read
