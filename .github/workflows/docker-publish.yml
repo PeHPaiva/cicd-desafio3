@@ -26,7 +26,8 @@ jobs:
 
   integration:
     uses: PeHPaiva/cicd-desafio3.1/.github/workflows/python-app.yml@main
-    permissions: read
+    permissions:
+      contents: read
     
   build:
     needs: integration
